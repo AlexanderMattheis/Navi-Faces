@@ -101,6 +101,7 @@ Heißt, über die Taste ``N`` gelangt man in das ``MapLoading``-Menü.
 ### 4. Add 
 Zum Hinzufügen der Objekte zum Surface.
 
+#### Beispiele:
 ```ruby
 Add:
 (btn{New, Controls, Credits}, 50.0, 39.2[+10.0], 36.5, 7.29);
