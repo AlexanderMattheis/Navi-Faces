@@ -86,7 +86,7 @@ btnExit[E]->#exit;
 Zuvor erstellte Objekte werden auf andere Surfaces/Menüs verwiesen und Funktionen zugeteilt. Objekte werden mit dem ``->``- Operator verlinkt. Das heißt, die darauffolgende Funktion oder das jeweilige Surface/Menü wird aufgerufen.
 
 ##### Kommandos
-``#post``: nimmt den Objektnamen <br>
+``#post``: nimmt den Objektnamen als Surfacenamen und verlinkt darauf <br>
 ``#big``: der String an den ``#big`` angehängt wird, wird in Großbuchstaben geschrieben <br>
 ``#exit``: verlässt die Anwendung
 
