@@ -32,7 +32,7 @@ corresponding generated menu/surface:
 <img src="https://github.com/AlexanderMattheis/navi-faces-CANCELED/blob/master/Preview/Capture.PNG">
 
 ## Developer-Funktionen
-Funktionen, denen der Entwickler eine bestimmte Funktion zugeteilt hat. Diesen Funktionen sind unterschiedliche Rechte zu Teil. Daher müssen sie unterschiedlich gehandhabt werden. Beispielsweise erlaubt die ``Add``-Funktion die Übergabe von Widgets ans Surface, während in der ``Define``-Funktion lediglich Variablen definiert werden können.
+Funktionen, denen der Entwickler eine bestimmte Funktion zugeteilt hat. Diesen Funktionen sind unterschiedliche Rechte zu Teil. Daher müssen sie unterschiedlich gehandhabt werden. Beispielsweise erlaubt die ``Add``-Funktion nur die Übergabe von Widgets ans Surface, während in der ``Define``-Funktion lediglich Variablen definiert werden können.
 
 ### 1. Define 
 Definition von Variablen, die für die Objekte/Widgets benötigt werden.
