@@ -32,7 +32,7 @@ Add:
 Funktionen, denen der Entwickler eine bestimmte Funktion zugeteilt hat. Diesen Funktionen sind unterschiedliche Rechte zu Teil. Daher müssen sie unterschiedlich gehandhabt werden. Beispielsweise erlaubt die ``Add``-Funktion die Übergabe von Widgets ans Surface, während in der ``Define``-Funktion lediglich Variablen definiert werden können.
 
 ### 1. Define 
-Definition von Variablen, die für die Objekte benötigt werden.
+Definition von Variablen, die für die Objekte/Widgets benötigt werden.
 
 #### Beispiele:
 ```ruby
