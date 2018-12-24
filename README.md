@@ -88,8 +88,8 @@ Zuvor erstellte Objekte werden auf andere Surfaces/Menüs verwiesen und Funktion
 ```
 btnNew[N]->MapLoading;
 ```
-bedeutet die Taste N ist ein Stellvertreter/Shortcut beim ``MapLoading``.
-Heißt, über die Taste gelangt man in das ``MapLoading``-Menü.
+bedeutet die Taste ``N`` ist ein Stellvertreter/Shortcut beim ``MapLoading``.
+Heißt, über die Taste ``N` gelangt man in das ``MapLoading``-Menü.
 
 ### 4. Add 
 Zum Hinzufügen der Objekte zum Surface.
