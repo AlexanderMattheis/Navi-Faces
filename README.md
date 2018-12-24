@@ -61,7 +61,7 @@ wobei: <br>
 
 Dient der Erstellung sichtbarer Oberflächenobjekte (``img..., btn...``). Variablen können, aber müssen nicht an die Objekte übergeben werden. Variablen (``color, highlight, sound, ...``) werden in alphabetischer Reihenfolge übergeben.
 
-#### Objekt-Arrays
+##### Objekt-Arrays
 ```ruby
 btn{New, Credits, ...}([parameter])
 ```
@@ -79,12 +79,12 @@ btnExit[E]->#exit;
 
 Zuvor erstellte Objekte werden auf andere Surfaces/Menüs verwiesen und Funktionen zugeteilt. Objekte werden mit dem ``->``- Operator verlinkt. Das heißt, die darauffolgende Funktion oder das jeweilige Surface/Menü wird aufgerufen.
 
-#### Kommandos
+##### Kommandos
 ``#post``: nimmt den Objektnamen <br>
 ``#big``: der String an den ``#big`` angehängt wird, wird in Großbuchstaben geschrieben <br>
 ``#exit``: verlässt die Anwendung
 
-#### Stellvertreter/Shortcuts
+##### Stellvertreter/Shortcuts
 ```
 btnNew[N]->MapLoading;
 ```
