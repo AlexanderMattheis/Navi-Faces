@@ -108,8 +108,8 @@ Add:
 Variablen wird der Wert auf der rechten Seite (also nach dem ``=``) zugewiesen. Variablen werden Objekten übergeben.
 Variablen können aufgezählt werden
 ```ruby
-image_1 = Logos.navi_logo_white;
-image_2 = Gui.MenuButton;
+image<0> = #image=DefaultLogo;
+image<1> = GUI.Icons.arrow_left;
 ...
 ```
 
