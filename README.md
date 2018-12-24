@@ -172,4 +172,4 @@ Add:
 ```
 
 Somit werden Variablen ``color, highlight, sound, text, textColor`` an Objekte ``btn`` übergeben
-und der eine ``btn`` mit den gegebenen Parametern ``50.0, 39.3, 36.5, 7.29`` ans Surface übergeben.
+und der eine ``btn`` mit den gegebenen Parametern ``50.0, 39.3, 36.5, 7.29`` wird ans Surface übergeben.
