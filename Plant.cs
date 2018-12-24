@@ -1,7 +1,7 @@
 ﻿/*
  * The zlib/libpng License
  * 
- * Copyright(c) [year] Alexander Mattheis <mattheia@informatik.uni-freiburg.de>
+ * Copyright(c) 2015 Alexander Mattheis <mattheia@informatik.uni-freiburg.de>
  * 
  * This software is provided 'as-is', without any express or implied warranty.
  * In no event will the authors be held liable
