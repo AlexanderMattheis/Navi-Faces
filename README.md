@@ -107,8 +107,8 @@ Add:
 ```
 
 ## Variablen
-Variablen wird der Wert auf der rechten Seite (also nach dem ``=``) zugewiesen. Variablen werden Objekten übergeben.
-Variablen können aufgezählt werden
+Variablen wird der Wert auf der rechten Seite (also nach dem ``=``) zugewiesen und Variablen werden Objekten übergeben.
+Sie können auch aufgezählt werden
 ```ruby
 image<0> = #image=DefaultLogo;
 image<1> = GUI.Icons.arrow_left;
