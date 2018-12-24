@@ -164,16 +164,6 @@ Variablen -> Widget -> Surface -> Screen
 
 #### Beispiele:
 ```ruby
-import(Windows.Main);
-dimensions = (0.0, 0.0, 100.0, 100.0);
-alignment = center;
-```
-
-Somit wird dem  das Hauptfenster ``Main`` übergeben und die zugehörigen Variablen gesetzt. 
-Wobei diese in genau den hier zwei gezeigten Fall weggelassen werden können, 
-da es sich auf der rechten Seite um Default-Werte handelt.
-
-```ruby
 Create:
 btn{New, Controls, Credits, Exit}(color, highlight, sound, text, textColor)
 
