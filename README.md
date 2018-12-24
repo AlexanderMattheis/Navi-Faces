@@ -44,6 +44,7 @@ image = Gui.MenuButton;
 shinyImage = Gui.MenuButtonHighlight;
 pivot = (50.0, 50.0);
 ```
+**Hint:** Default values are read from stylesheets of certain type.
 
 Die Deklaration von Variablen sollte nach Konvention in alphabetischer Reihenfolge bzgl. des Variablentyps erfolgen. 
 Man könnte die Variablen mit den primitiven Variablentypen gängiger Programmiersprachen vergleichen.
