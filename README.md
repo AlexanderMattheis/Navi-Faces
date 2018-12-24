@@ -2,8 +2,8 @@
 A very old project integrated in my unfinished strategy game **The Navigators**. The architecture was too complicated
 in comparison to the MVC-pattern similar architectures I create now.
 Also, the description is currently only available in German. It is about a new language which allows you
-to design multilingual, resolution independent menus in computer games very fast/time efficient due to a hard separation of logic
-and design e.g. a fully working main menu with four buttons written in the Faces-language:
+to design multilingual, resolution independent menus/huds in computer games very fast/time efficient due to a hard separation of logic
+and design e.g. a fully working main-menu with four buttons written in the Faces-language:
 
 ```ruby
 import(Windows.Main);
@@ -28,11 +28,11 @@ Add:
 (btnExit, y = 83.3);
 ```
 
-Corresponding generated menu:
-<img src="">
+corresponding generated menu/surface:
+<img src="https://github.com/AlexanderMattheis/navi-faces-CANCELED/blob/master/Preview/Capture.PNG">
 
 ## Developer-Funktionen
-Funktionen, denen der Entwickler eine bestimmte Funktion zugeteilt hat. Diesen Funktionen sind unterschiedliche Rechte zu Teil. Daher müssen sie unterschiedlich gehandhabt werden. Beispielsweise erlaubt die ``Add``-Funktion die Übergabe von Widgets ans Surface, während in der ``Define``-Funktion lediglich Variablen definiert werden können.
+Funktionen, denen der Entwickler eine bestimmte Funktion zugeteilt hat. Diesen Funktionen sind unterschiedliche Rechte zu Teil. Daher müssen sie unterschiedlich gehandhabt werden. Beispielsweise erlaubt die ``Add``-Funktion nur die Übergabe von Widgets ans Surface, während in der ``Define``-Funktion lediglich Variablen definiert werden können.
 
 ### 1. Define 
 Definition von Variablen, die für die Objekte/Widgets benötigt werden.
@@ -40,10 +40,13 @@ Definition von Variablen, die für die Objekte/Widgets benötigt werden.
 #### Beispiele:
 ```ruby
 Define:
-image = Gui.MenuButton;
-shinyImage = Gui.MenuButtonHighlight;
+color = #color=Button;
+highlight = #color=ButtonHighlight;
 pivot = (50.0, 50.0);
+sound = #sound=Widget;
 ```
+**Hint:** Default-Werte werden aus Banken eines bestimmten Typs entnommen z.B. wird hier für ``highlight`` und ``button``, 
+die ``color``-Bank und für die Sounds, die ``sound``-Bank verwendet.
 
 Die Deklaration von Variablen sollte nach Konvention in alphabetischer Reihenfolge bzgl. des Variablentyps erfolgen. 
 Man könnte die Variablen mit den primitiven Variablentypen gängiger Programmiersprachen vergleichen.
@@ -62,7 +65,7 @@ wobei: <br>
 ``lbl``: Datentyp <br>
 ``ChooseAMap``: Objektname
 
-Dient der Erstellung sichtbarer Oberflächenobjekte (``img..., btn...``). Variablen können, aber müssen nicht an die Objekte übergeben werden. Variablen (``color, highlight, sound, ...``) werden in alphabetischer Reihenfolge übergeben.
+Dient der Erstellung sichtbarer Oberflächenobjekte ``img..., btn...``. Variablen können, aber müssen nicht an die Objekte übergeben werden. Variablen ``color, highlight, sound, ...`` werden in alphabetischer Reihenfolge übergeben.
 
 ##### Objekt-Arrays
 ```ruby
@@ -83,7 +86,7 @@ btnExit[E]->#exit;
 Zuvor erstellte Objekte werden auf andere Surfaces/Menüs verwiesen und Funktionen zugeteilt. Objekte werden mit dem ``->``- Operator verlinkt. Das heißt, die darauffolgende Funktion oder das jeweilige Surface/Menü wird aufgerufen.
 
 ##### Kommandos
-``#post``: nimmt den Objektnamen <br>
+``#post``: nimmt den Objektnamen als Surfacenamen und verlinkt darauf <br>
 ``#big``: der String an den ``#big`` angehängt wird, wird in Großbuchstaben geschrieben <br>
 ``#exit``: verlässt die Anwendung
 
@@ -103,12 +106,36 @@ Add:
 (btnExit, y = 83.3);
 ```
 
-## Variablen
-Variablen wird der Wert auf der rechten Seite (also nach dem ``=``) zugewiesen. Variablen werden Objekten übergeben.
-Variablen können aufgezählt werden
+## Parameterübergabe
+Die Parameterübergabe findet über die Parameterklammern ``(`` und ``)`` statt. 
+Es wird jeweils zur nächsthöheren Systemebene übergeben.
+
+### Ebenen
+1. Screen <br>                                                                                                                                                   
+2. Surface <br>								                  
+3. Widget (``img..., btn...``) <br>
+
+also: <br>
+Variablen -> Widget -> Surface -> Screen
+
+#### Beispiele:
 ```ruby
-image_1 = Logos.navi_logo_white;
-image_2 = Gui.MenuButton;
+Create:
+btn{New, Controls, Credits, Exit}(color, highlight, sound, text, textColor)
+
+Add:
+(btnNew, 50.0, 39.3, 36.5, 7.29);
+```
+
+Somit werden Variablen ``color, highlight, sound, text, textColor`` an Objekte vom Typ ``btn`` übergeben
+und der eine ``btn`` mit den gegebenen Parametern ``50.0, 39.3, 36.5, 7.29`` wird ans Surface übergeben.
+
+## Variablen
+Variablen wird der Wert auf der rechten Seite (also nach dem ``=``) zugewiesen und Variablen werden Objekten übergeben.
+Sie können auch aufgezählt werden
+```ruby
+image<0> = #image=DefaultLogo;
+image<1> = GUI.Icons.arrow_left;
 ...
 ```
 
@@ -146,37 +173,3 @@ image_2 = Gui.MenuButton;
 ### System:
 - alignment
 - dimensions
-
-## Parameterübergabe
-Die Parameterübergabe findet über die Parameterklammern ``(`` und ``)`` statt. 
-Es wird jeweils zur nächsthöheren Systemebene übergeben.
-
-### Ebenen
-1. Screen <br>                                                                                                                                                   
-2. Surface <br>								                  
-3. Widget (``img..., btn...``) <br>
-
-also: <br>
-Variablen -> Widget -> Surface -> Screen
-
-#### Beispiele:
-```ruby
-import(Windows.Main);
-dimensions = (0.0, 0.0, 100.0, 100.0);
-alignment = center;
-```
-
-Somit wird dem  das Hauptfenster ``Main`` übergeben und die zugehörigen Variablen gesetzt. 
-Wobei diese in genau den hier zwei gezeigten Fall weggelassen werden können, 
-da es sich auf der rechten Seite um Default-Werte handelt.
-
-```ruby
-Create:
-btn{New, Controls, Credits, Exit}(color, highlight, sound, text, textColor)
-
-Add:
-(btnNew, 50.0, 39.3, 36.5, 7.29);
-```
-
-Somit werden Variablen ``color, highlight, sound, text, textColor`` an Objekte ``btn`` übergeben
-und der eine ``btn`` mit den gegebenen Parametern ``50.0, 39.3, 36.5, 7.29`` ans Surface übergeben.
