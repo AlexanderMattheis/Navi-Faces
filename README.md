@@ -45,7 +45,8 @@ highlight = #color=ButtonHighlight;
 pivot = (50.0, 50.0);
 sound = #sound=Widget;
 ```
-**Hint:** Default values are read from stylesheets of certain type.
+**Hint:** Default-Werte werden aus Banken eines bestimmten Typs entnommen z.B. wird hier für ``highlight`` und ``button``, 
+die ``color``-Bank and für die Sounds, die ``sound``-Bank verwendet.
 
 Die Deklaration von Variablen sollte nach Konvention in alphabetischer Reihenfolge bzgl. des Variablentyps erfolgen. 
 Man könnte die Variablen mit den primitiven Variablentypen gängiger Programmiersprachen vergleichen.
