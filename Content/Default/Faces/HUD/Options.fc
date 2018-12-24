@@ -1,0 +1,59 @@
+﻿import(Windows.Internal);
+
+alignment = Left;
+
+Define:
+checkedColor<1> = #color=CheckedColor;
+icon = GUI.Icons.arrow_left;
+icon<1> = GUI.Icons.select_all;
+iconEffect = Mirror.Y;
+image = #image=MiniButton;
+image<0> = #image=Label;
+image<1> = #image=MacroButton;
+pivot = (0.0, 100.0);
+pivot<1> = (0.0, 150.0);
+pivot<2> = (0.0, 135.0);
+scale = 80.0;
+sound = #sound=Widget;
+text = #post#split#db#big;
+text<1> = #db=Number Of Units*:#big;
+text<2> = [Number];
+textColor = #color=TextHeader;
+textColor<1> = #color=TextBody;
+textPivot = (0.0, 100.0);
+textScale = 85.0;
+
+Create:
+// header
+lbl{Optimizations, Features}(text, textColor, textPivot, textScale);
+
+// bodies
+chbBidirectional(checkedColor<1>, image, pivot, sound);
+chb{VisualizePathNodes, VisualizeVisitedNodes}(checkedColor<1>, image, pivot, sound);
+
+ibtArrowLeft(image, icon, pivot<1>, sound);
+ibtArrowRight(image, icon, pivot<1>, iconEffect, sound);
+ibtSelectAll(icon<1>, image<1>, pivot<2>, scale, sound);
+
+lblNumberOfUnits(text<1>, textColor<1>, textPivot, textScale);
+lblNumberOfUnitsDisplay(image<0>, pivot<1>, text<2>, textColor<1>, textScale);
+lbl{Bidirectional, SelectAll, VisualizePath, VisualizeLists}(text, textColor<1>, textPivot, textScale);
+
+Add:
+// header
+(lblOptimizations, 5.3, 17.1);
+(lblFeatures, y = 36.3);
+
+// bodies
+(chbBidirectional, 40.0, 21.7, 3.75, 3.75);
+(chbVisualizePathNodes, 40.0, 63.5, 3.75, 3.75);
+(chbVisualizeVisitedNodes, y = 67.5);
+
+(ibt{ArrowLeft, ArrowRight}, 35.1[+4.9], 47.5, 3.75, 3.75);
+(ibtSelectAll, 35.7, 57.7, 8.75, 8.75);
+
+(lblBidirectional, 5.3, 21.7);
+(lblNumberOfUnits, y = 40.9);
+(lblNumberOfUnitsDisplay, 5.2, 47.7, 28.125, 3.888);
+(lblSelectAll, 5.3, 52.3);
+(lbl{VisualizePath, VisualizeLists}, 5.3, 63.5[+4.0]);

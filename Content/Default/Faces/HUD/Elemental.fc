@@ -1,0 +1,48 @@
+﻿import(Windows.Internal);
+
+alignment = Left;
+
+Define:
+checkedColor = #color=SelectedColor;
+image = #image=MiniButton;
+pivot = (0.0, 100.0);
+sound = #sound=Widget;
+text = #post#split#db#big;
+textColor = #color=TextHeader;
+textColor<1> = #color=TextBody;
+textPivot = (0.0, 100.0);
+textScale = 85.0;
+
+Create:
+// header
+lbl{PriorityQueue, PathFinder}(text, textColor, textPivot, textScale);
+rad{Array, BinaryHeap}(checkedColor, image, pivot, sound);
+
+// bodies
+lbl{Array, BinaryHeap,
+BreadthFirstSearch, DepthFirstSearch, Dijkstra, 
+BestFirstSearch, AStar, ThetaStar, DStarLite, JumpPointSearch}(text, textColor<1>, textPivot, textScale);
+
+rad{BreadthFirstSearch, DepthFirstSearch, Dijkstra, 
+BestFirstSearch, AStar, ThetaStar, DStarLite, JumpPointSearch}(checkedColor, image, pivot, sound);
+
+Link:
+rad{Array, BinaryHeap}->#gfx=SavePriorityQueueChanges;
+rad{BreadthFirstSearch, DepthFirstSearch, Dijkstra, BestFirstSearch, AStar, ThetaStar, DStarLite, JumpPointSearch}->#gfx=SaveMainAlgorithmChanges;
+
+Add:
+// header
+(lblPriorityQueue, 4.3, 17.1);
+(lblPathFinder, y = 36.3);
+
+// bodies
+(lbl{Array, BinaryHeap}, 4.3, 21.7[+4.0]);
+(rad{Array, BinaryHeap}, 40.0, 21.7[+4.0], 3.75, 3.75);
+
+(lbl{BreadthFirstSearch, DepthFirstSearch}, 4.3, 40.9[+4.0]);
+(radBreadthFirstSearch, 40.0, 40.9, 3.75, 3.75);
+(radDepthFirstSearch, y = 44.9);
+
+(lbl{Dijkstra, BestFirstSearch, AStar, ThetaStar, DStarLite, JumpPointSearch}, 4.3, 50.9[+4.0]);
+(rad{Dijkstra, BestFirstSearch, AStar, ThetaStar, DStarLite, JumpPointSearch}, 40.0, 50.9[+4.0], 3.75, 3.75);
+

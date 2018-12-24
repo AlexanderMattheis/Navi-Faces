@@ -1,0 +1,12 @@
+﻿Define:
+color = #color=Window;
+image = #image=DefaultLogo;
+pivot = (50.0, 100.0);
+
+Create: 
+imgWindow(color);
+imgLogo(image, pivot);
+
+Add:
+(imgWindow, 50.0, 50.0, 52.6, 87.2);
+(imgLogo, 50.0, 28.3, 16.6, 18.4);

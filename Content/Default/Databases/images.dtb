@@ -1,0 +1,4 @@
+﻿DefaultLogo = Logos.navi_logo_halo;
+Label = GUI.label;
+MacroButton = GUI.macro_button;
+MiniButton = GUI.mini_button;

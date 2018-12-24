@@ -1,0 +1,26 @@
+﻿alignment = Left;
+
+Define:
+image = #image=MiniButton;
+icon = GUI.Icons.arrow_left;
+iconEffect = Mirror.Y;
+pivot = (0.0, 100.0);
+scale = 90.0;
+sound = #sound=Widget;
+text = 1;
+textAlignment = Center;
+textColor = #color=TextHeader;
+textPivot<1> = (50.0, 50.0);
+
+Create:
+ibtArrowLeft(image, icon, pivot, scale, sound);
+ibtArrowRight(image, icon, iconEffect, pivot, scale, sound);
+lblPageDisplay(image, pivot, scale, text, textAlignment, textColor);
+
+Link:
+ibtArrowLeft[Left]->#fx=Previous;
+ibtArrowRight[Left]->#fx=Next;
+
+Add:
+(ibt{ArrowLeft, ArrowRight}, 20.6[+7.0], 88.3, 3.75, 3.75);
+(lblPageDisplay, x = 24.1);

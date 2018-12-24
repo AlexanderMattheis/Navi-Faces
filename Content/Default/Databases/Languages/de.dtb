@@ -1,0 +1,58 @@
+﻿// Menu
+Back = Zurück;
+Choose A Map = Wähle Karte;
+Controls = Steuerung;
+Edit Mode = Editieren;
+Exit = Ende;
+Hotkey = Tastenkürzel;
+Loading... = Lade...;
+Main Menu = Hauptmenü;
+Map Music = Karten-Musik;
+Menu Music = Menü-Musik;
+New = Neu;
+Nintendo =	"Nintendo was cool" von Matt McFarland
+			#ln https*:/*/soundcloud.com/mcfarland-beats/nintendo
+			#ln ist lizensiert unter einer Creative Commons Lizenz*:
+			#ln https*:/*/creativecommons.org/licenses/by/3.0/de/;
+Scroll Bottom = Scrolle runter;
+Scroll Left = Scrolle links;
+Scroll Right = Scrolle rechts;
+Scroll Top = Scrolle hoch;
+Slipped	=	"Slipped" von Matt McFarland
+			#ln	https*:/*/soundcloud.com/mcfarland-beats/slipped
+			#ln ist lizensiert unter einer Creative Commons Lizenz*:
+			#ln http*:/*/creativecommons.org/licenses/by/3.0/de/;
+Please Wait... = Bitte warten...
+
+// Ingame
+Priority Queue = Prioritätsschlange;
+	Array = Feld;
+	Binary Heap = Binärer Heap;
+Path Finder = Wegfindung;
+	Breadth First Search = Breitensuche;
+	Depth First Search = Tiefensuche;
+	Best First Search = Bestensuche;
+	A Star = A Stern;
+	Theta Star = Theta Stern;
+	D Star Lite = Vereinfachter D Stern;
+	Jump Point Search = Sprungpunktsuche;
+
+Expansion = Ausbreitung;
+	4 Directions = 4 Richtungen;
+	8 Directions = 8 Richtungen;
+Distance Measure = Distanzmessung;
+	Euclidean = Euklidisch;
+	Manhatten = Mannheimer;
+	Chebychev = Tschebyscheff;
+	Octile = Oktil;
+Options = Optionen;
+	Post Smoothing = Nachglätten;
+
+Optimizations = Optimierungen;
+	Bidirectional = Bidirektional;
+
+Features = Funktionen;
+	Number Of Units*: = Einheitenzahl*:;
+	Select All = Selektiere alle;
+	Visualize Path = Visualisiere Pfad;
+	Visualize Lists = Visualisiere Listen;

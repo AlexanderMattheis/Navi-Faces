@@ -1,0 +1,11 @@
+﻿Define:
+color = #color=Window;
+textColor = #color=TextBody;
+
+Create:
+img{Window, InnerWindow}(color);
+lblMessage(text, textColor);
+
+Add:
+(img{Window, InnerWindow}, 50.0, 50.0, 62.7[-4.0], 35.8[-4.0]);
+(lblMessage);

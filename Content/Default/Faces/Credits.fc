@@ -1,0 +1,30 @@
+﻿import(Windows.Main);
+
+Define:
+color = #color=Button;
+highlight = #color=ButtonHighlight;
+sound = #sound=Widget;
+text = #post#split#db;
+text<0> = #db=Slipped;
+text<1> = #db=Nintendo;
+textColor = #color=TextHeader;
+textColor<0> = #color=TextBody;
+textPivot = (0.0, 100.0); 
+textScale = 77.0;
+
+Create:
+btnBack(color, highlight, sound, text, textColor<0>);
+lblCredits(text, textColor<0>);
+lblMenuMusic(text, textColor, textPivot, textScale);
+lblMenuMusicText(text<0>, textColor<0>, textPivot, textScale);
+lblMapMusic(text, textColor, textPivot, textScale);
+lblMapMusicText(text<1>, textColor<0>, textPivot, textScale);
+
+Link:
+btnBack[B]->#back;
+
+Add:
+(btnBack, 50.0, 83.3, 36.5, 7.29);
+(lblCredits, 50.0, 34.7);
+(lbl{MenuMusic, MenuMusicText}, 24.9, 46.0[+12.0]);
+(lbl{MapMusic, MapMusicText}, 24.9, 63.1[+12.0]);
