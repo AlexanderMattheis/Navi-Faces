@@ -65,7 +65,7 @@ wobei: <br>
 ``lbl``: Datentyp <br>
 ``ChooseAMap``: Objektname
 
-Dient der Erstellung sichtbarer Oberflächenobjekte (``img..., btn...``). Variablen können, aber müssen nicht an die Objekte übergeben werden. Variablen (``color, highlight, sound, ...``) werden in alphabetischer Reihenfolge übergeben.
+Dient der Erstellung sichtbarer Oberflächenobjekte ``img..., btn...``. Variablen können, aber müssen nicht an die Objekte übergeben werden. Variablen ``color, highlight, sound, ...`` werden in alphabetischer Reihenfolge übergeben.
 
 ##### Objekt-Arrays
 ```ruby
