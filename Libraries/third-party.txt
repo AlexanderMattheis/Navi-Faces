@@ -1,0 +1,5 @@
+Monogame Framework 3.4 https://github.com/mono/MonoGame
+Navi Project by Alexander Mattheis (own, still in development, extended during this work)
+NAudio Library by Mark Heath https://github.com/filoe
+System.IO.Compression of Microsoft Corporation
+System.IO.Compression.FileSystem of Microsoft Corporation

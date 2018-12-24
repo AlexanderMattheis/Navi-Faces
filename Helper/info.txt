@@ -1,0 +1,2 @@
+﻿This namespace should only contain extensions 
+and enhancements for the fundamental C# libraries.

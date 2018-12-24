@@ -1,0 +1,7 @@
+﻿Button = (64, 64, 64, 64);
+ButtonHighlight = (191, 191, 191, 191);
+CheckedColor = (154, 205, 50, 255);
+SelectedColor = (216, 55, 82, 255);
+TextHeader = (216, 55, 82, 255);
+TextBody = (0, 0, 0, 128);
+Window = (135, 135, 135, 135);

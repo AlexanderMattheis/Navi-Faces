@@ -1,0 +1,43 @@
+﻿import(Windows.Main);
+
+Define:
+checkedColor = #color=CheckedColor;
+color = #color=Button;
+highlight = #color=ButtonHighlight;
+image = #image=MiniButton;
+image<0> = #image=Label;
+icon = GUI.Icons.arrow_left;
+iconEffect = Mirror.Y;
+pivot = (0.0, 0.0);
+pivot<0> = (50.0, 50.0);
+scale = 90.0;
+sound = #sound=Widget;
+text = #post#split#db;
+textColor = #color=TextBody;
+textPivot = (0.0, 0.0);
+textScale = 90.0;
+
+Create:
+btn{Start, Back}(color, highlight, sound, text, textColor);
+chbEditMode(checkedColor, image, pivot, scale, sound);
+ibtArrowLeft(image, icon, scale, sound);
+ibtArrowRight(image, icon, iconEffect, scale, sound);
+lblChooseAMap(text, textColor);
+lblEditMode(text, textColor, textPivot, textScale);
+lblMapDisplay(image<0>, pivot<0>, textColor);
+
+Link:
+btnBack[B]->#back;
+btnStart[S]->#fx=Start;
+ibtArrowLeft[Left]->#fx=Previous;
+ibtArrowRight[Left]->#fx=Next;
+
+Add:
+(btnStart, 50.0, 59.2, 36.5, 7.29);
+(btnBack, y = 83.3);
+(chbEditMode, 64.38, 66.5, 3.75, 3.75);
+(ibtArrowLeft, x = 33.2, y = 47.1);
+(ibtArrowRight, x = 66.8);
+(lblChooseAMap, 50.0, 34.7);
+(lblEditMode, 31.82, 66.75);
+(lblMapDisplay, 50.0, 47.2, 28.125, 3.888);

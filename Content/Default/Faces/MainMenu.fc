@@ -1,0 +1,20 @@
+﻿import(Windows.Main);
+
+Define:
+color = #color=Button;
+highlight = #color=ButtonHighlight;
+sound = #sound=Widget;
+text = #post#db;
+textColor = #color=TextBody;
+
+Create:
+btn{New, Controls, Credits, Exit}(color, highlight, sound, text, textColor);
+
+Link:
+btnNew[N]->MapLoading;
+btn{Controls, Credits}->#post;
+btnExit[E]->#exit;
+
+Add:
+(btn{New, Controls, Credits}, 50.0, 39.2[+10.0], 36.5, 7.29);
+(btnExit, y = 83.3);

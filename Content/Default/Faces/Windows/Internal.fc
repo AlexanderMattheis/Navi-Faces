@@ -1,0 +1,11 @@
+﻿alignment = Left;
+
+Define:
+color = #color=Window;
+pivot = (0.0, 50.0);
+
+Create: 
+img{Window, InnerWindow}(color, pivot);
+
+Add:
+(img{Window, InnerWindow}, 0.0, 50.0, 49.5[-4.0], 87.2[-7.1]);

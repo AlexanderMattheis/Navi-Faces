@@ -1,0 +1,49 @@
+﻿import(Windows.Internal);
+
+alignment = Left;
+
+Define:
+checkedColor = #color=SelectedColor;
+checkedColor<1> = #color=CheckedColor;
+image = #image=MiniButton;
+pivot = (0.0, 100.0);
+sound = #sound=Widget;
+text = #post#split#db#big;
+textColor = #color=TextHeader;
+textColor<1> = #color=TextBody;
+textPivot = (0.0, 100.0);
+textScale = 85.0;
+
+Create:
+// header
+lbl{Expansion, DistanceMeasure, Options}(text, textColor, textPivot, textScale);
+
+// bodies
+chbPostSmoothing(checkedColor<1>, image, pivot, sound);
+
+lbl{8Directions, 4Directions}(text, textColor<1>, textPivot, textScale);
+lbl{Euclidean, Manhatten, Chebychev, Octile}(text, textColor<1>, textPivot, textScale);
+lblPostSmoothing(text, textColor<1>, textPivot, textScale);
+
+rad{8Directions, 4Directions}(checkedColor, image, pivot, sound);
+rad{Euclidean, Manhatten, Chebychev, Octile}(checkedColor, image, pivot, sound);
+
+Link:
+rad{Euclidean, Manhatten, Chebychev, Octile}->#gfx=SaveDistanceMeasureChanges;
+rad{8Directions, 4Directions}->#gfx=SaveExpansionChanges;
+
+Add:
+// header
+(lblExpansion, 5.3, 17.1);
+(lblDistanceMeasure, y = 36.3);
+(lblOptions, y = 62.9);
+
+// bodies
+(chbPostSmoothing, 40.0, 67.5, 3.75, 3.75);
+
+(lbl{8Directions, 4Directions}, 5.3, 21.7[+4.0]);
+(lbl{Euclidean, Manhatten, Chebychev, Octile}, 5.3, 40.9[+4.0]);
+(lblPostSmoothing, y = 67.5);
+
+(rad{8Directions, 4Directions}, 40.0, 21.7[+4.0], 3.75, 3.75);
+(rad{Euclidean, Manhatten, Chebychev, Octile}, 40.0, 40.9[+4.0], 3.75, 3.75);
