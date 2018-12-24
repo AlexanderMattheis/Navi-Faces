@@ -40,9 +40,10 @@ Definition von Variablen, die für die Objekte/Widgets benötigt werden.
 #### Beispiele:
 ```ruby
 Define:
-image = Gui.MenuButton;
-shinyImage = Gui.MenuButtonHighlight;
+color = #color=Button;
+highlight = #color=ButtonHighlight;
 pivot = (50.0, 50.0);
+sound = #sound=Widget;
 ```
 **Hint:** Default values are read from stylesheets of certain type.
 
