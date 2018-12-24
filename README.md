@@ -2,7 +2,7 @@
 A very old project integrated in my unfinished Navi-Game. The architecture was too complicated
 in comparison to the MVC-pattern similar architectures I create now.
 Also, the description is currently only available in German. It is about a new language which allows you
-design multilingual, resolution independant menus in computer games very fast/time efficient due to a hard separation of logic
+to design multilingual, resolution independant menus in computer games very fast/time efficient due to a hard separation of logic
 and design e.g. a fully working main menu with four buttons written in the Faces-language:
 
 ```ruby
