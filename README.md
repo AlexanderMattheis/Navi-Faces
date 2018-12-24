@@ -106,6 +106,30 @@ Add:
 (btnExit, y = 83.3);
 ```
 
+## Parameterübergabe
+Die Parameterübergabe findet über die Parameterklammern ``(`` und ``)`` statt. 
+Es wird jeweils zur nächsthöheren Systemebene übergeben.
+
+### Ebenen
+1. Screen <br>                                                                                                                                                   
+2. Surface <br>								                  
+3. Widget (``img..., btn...``) <br>
+
+also: <br>
+Variablen -> Widget -> Surface -> Screen
+
+#### Beispiele:
+```ruby
+Create:
+btn{New, Controls, Credits, Exit}(color, highlight, sound, text, textColor)
+
+Add:
+(btnNew, 50.0, 39.3, 36.5, 7.29);
+```
+
+Somit werden Variablen ``color, highlight, sound, text, textColor`` an Objekte vom Typ ``btn`` übergeben
+und der eine ``btn`` mit den gegebenen Parametern ``50.0, 39.3, 36.5, 7.29`` wird ans Surface übergeben.
+
 ## Variablen
 Variablen wird der Wert auf der rechten Seite (also nach dem ``=``) zugewiesen und Variablen werden Objekten übergeben.
 Sie können auch aufgezählt werden
@@ -149,27 +173,3 @@ image<1> = GUI.Icons.arrow_left;
 ### System:
 - alignment
 - dimensions
-
-## Parameterübergabe
-Die Parameterübergabe findet über die Parameterklammern ``(`` und ``)`` statt. 
-Es wird jeweils zur nächsthöheren Systemebene übergeben.
-
-### Ebenen
-1. Screen <br>                                                                                                                                                   
-2. Surface <br>								                  
-3. Widget (``img..., btn...``) <br>
-
-also: <br>
-Variablen -> Widget -> Surface -> Screen
-
-#### Beispiele:
-```ruby
-Create:
-btn{New, Controls, Credits, Exit}(color, highlight, sound, text, textColor)
-
-Add:
-(btnNew, 50.0, 39.3, 36.5, 7.29);
-```
-
-Somit werden Variablen ``color, highlight, sound, text, textColor`` an Objekte vom Typ ``btn`` übergeben
-und der eine ``btn`` mit den gegebenen Parametern ``50.0, 39.3, 36.5, 7.29`` wird ans Surface übergeben.
