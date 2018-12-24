@@ -61,6 +61,11 @@ wobei: <br>
 
 Dient der Erstellung sichtbarer Oberflächenobjekte (``img..., btn...``). Variablen können, aber müssen nicht an die Objekte übergeben werden. Variablen (``color, highlight, sound, ...``) werden in alphabetischer Reihenfolge übergeben.
 
+#### Objekt-Arrays
+```ruby
+btn{New, Credits, ...}([parameter])
+```
+
 ### 3. Link
 Zum Verlinken von Objekten.
 
@@ -78,6 +83,13 @@ Zuvor erstellte Objekte werden auf andere Surfaces/Menüs verwiesen und Funktion
 ``#post``: nimmt den Objektnamen <br>
 ``#big``: der String an den ``#big`` angehängt wird, wird in Großbuchstaben geschrieben <br>
 ``#exit``: verlässt die Anwendung
+
+#### Stellvertreter/Shortcuts
+```
+btnNew[N]->MapLoading;
+```
+bedeutet die Taste N ist ein Stellvertreter/Shortcut beim ``MapLoading``.
+Heißt, über die Taste gelangt man in das ```MapLoading``-Menü.
 
 ### 4. Add 
 Zum Hinzufügen der Objekte zum Surface.
@@ -165,16 +177,3 @@ Add:
 
 Somit werden Variablen ``color, highlight, sound, text, textColor`` an Objekte ``btn`` übergeben
 und der eine ``btn`` mit den gegebenen Parametern ``50.0, 39.3, 36.5, 7.29`` ans Surface übergeben.
-
-### Objekt-Arrays
-```ruby
-btn{New, Credits, ...}([parameter])
-```
-
-## Stellvertreter/Shortcuts
-```
-btnNew[N]->MapLoading;
-```
-bedeutet die Taste N ist ein Stellvertreter/Shortcut beim ``MapLoading``.
-Heißt, über die Taste gelangt man in das ```MapLoading``-Menü.
-
